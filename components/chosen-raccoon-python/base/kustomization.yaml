@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: chosen-raccoon-python
+  janus-idp.io/tekton: chosen-raccoon-python
+  backstage.io/kubernetes-id: chosen-raccoon-python
+  backstage.io/kubernetes-namespace: rhtap-e2e-ci 
+  app.kubernetes.io/part-of: chosen-raccoon-python
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
